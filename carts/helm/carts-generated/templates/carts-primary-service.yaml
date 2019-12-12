@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2019-12-12T02:18:41Z"
+  name: carts-primary
+  resourceVersion: "1140388"
+  selfLink: /api/v1/namespaces/sockshop-staging/services/carts
+  uid: b6df11ba-1c85-11ea-ad5b-42010a980069
+spec:
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: carts-primary
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
